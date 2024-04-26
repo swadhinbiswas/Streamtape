@@ -321,5 +321,3 @@ class Streamtape:
     """
     url:str=f"{self.baseurl}file/getsplash?{self.login}&file={file_id}"
     return self._request("GET",url)
-  
-  
