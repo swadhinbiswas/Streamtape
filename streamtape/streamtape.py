@@ -1,10 +1,7 @@
 from typing import Optional,Dict,List,Any
 import  requests
 
-# Streamtape class
-baseurl = "https://api.streamtape.com/"
-api_key = "0b51cfb014afaf638b23"
-api_secret = "BjX19gLBDkcyg3b"
+
 
 
 class Streamtape:
