@@ -10,7 +10,7 @@ api_secret = "BjX19gLBDkcyg3b"
 class Streamtape:
   def __init__(self,api_key:str,api_secret:str):
     self.baseurl = "https://api.streamtape.com/"
-    self.loginmathod=
+
     self.api_key = api_key
     self.api_secret = api_secret
     
