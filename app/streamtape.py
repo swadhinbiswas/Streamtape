@@ -73,7 +73,7 @@ class Streamtape:
   
   def upload_file(self,
                   file:str,
-                  folder_id:Optional[str]=None,
+                  folder_id:Optional[str]='0',
                   hash:Optional[str]=None,
                   httponly:Optional[bool]=None)->Dict[str,Any]:
     
@@ -87,9 +87,12 @@ class Streamtape:
     
     Returns a dictionary of upload file
     """
-    url=f"{self.baseurl}/file/ul?{self.login}&&folder={folder_id}&sha256={hash}&httponly={httponly}"
-    
-    return self._request("POST",url,params=file)
+    url=f"{self.baseurl}/file/ul?{self.login}&folder={folder_id}&sha256={hash}&httponly={httponly}"
+    upload=self._request("GET",url)
+    uploadurl=upload['result']['url']
+    files={'file':open(file,'rb')}
+    response=requests.post(uploadurl,files=files)
+    return response.json()
   
   def add_remote_upload(self,
     link:str,
@@ -126,7 +129,7 @@ class Streamtape:
     return self._request("GET",url)
   
   def cheak_upload_status(self,
-                          file_id:str,
+                          file_id:Optional[str]=None,
                           limit:Optional[str]=None,
                           )->Dict[str,Any]:
     """
@@ -140,16 +143,21 @@ class Streamtape:
     
     return self._request("GET",url)
   
-  def list_of_files(self,folder=Optional[str])->Dict[str,Any]:
+  def list_of_files(self,
+                    folder_id:Optional[str]=None)->Dict[str,Any]:
     """
     List of files
     Args:
     folder:Optional[str]->folder id
+    
     """
-    url=f"{self.baseurl}file/listfolder?{self.login}&folder={folder}"
+    if folder_id==None:
+      url=url=f"{self.baseurl}file/listfolder?{self.login}"
+    else:
+     url=f"{self.baseurl}file/listfolder?{self.login}&folder={folder_id}"
     return self._request("GET",url)
   
-  def create_folder(self,foldername:str,pid:Optional[str])->Dict[str,Any]:
+  def create_folder(self,foldername:str,pid:Optional[str]=None)->Dict[str,Any]:
     """
     Create folder
     Args:
@@ -157,7 +165,7 @@ class Streamtape:
     pid:Optional[str]->parent folder id
     
     Returns a dictionary of create folder"""
-    url=f"{self.baseurl}file/createfolder?{self.login}&name={foldername}&pid={pid}"
+    url=f"{self.baseurl}file/createfolder?{self.login}&name={foldername}&parent={pid}"
     
     return self._request("GET",url)
   
@@ -216,6 +224,102 @@ class Streamtape:
     
     """
     url:str=f"{self.baseurl}file/runningconverts?{self.login}"
+    return self._request("GET",url)
+  
+  
+  def list_of_confails(self)->Dict[str,Any]:
+    """
+    List of confails
+    
+    Returns a dictionary of list of confails
+    
+    
+    """
+    url:str=f"{self.baseurl}file/failedconverts?{self.login}"
+    return self._request("GET",url)
+  
+  def list_of_finished_conversions(self)->Dict[str,Any]:
+    """
+    List of finished conversions
+    
+    Returns a dictionary of list of finished conversions
+    
+    
+    """
+    url:str=f"{self.baseurl}file/finishedconverts?{self.login}"
+    return self._request("GET",url)
+  
+  def list_of_conversion_formats(self)->Dict[str,Any]:
+    """
+    List of conversion formats
+    
+    Returns a dictionary of list of conversion formats
+    
+    
+    """
+    url:str=f"{self.baseurl}file/convertformats?{self.login}"
+    return self._request("GET",url)
+  
+  def convert_file(self,file_id:str,format:str)->Dict[str,Any]:
+    """
+    Convert file
+    Args:
+    file_id:str->which file you want to convert
+    format:str->format of file
+    
+    Returns a dictionary of convert file
+    
+    """
+    url:str=f"{self.baseurl}file/convert?{self.login}&file={file_id}&format={format}"
+    return self._request("GET",url)
+  
+  def cancel_conversion(self,conv_id:str)->Dict[str,Any]:
+    """
+    Cancel conversion
+    Args:
+    conv_id:str->which conversion you want to cancel
+    
+    Returns a dictionary of cancel conversion
+    
+    """
+    url:str=f"{self.baseurl}file/cancelconvert?{self.login}&id={conv_id}"
+    return self._request("GET",url)
+  
+  def get_conversion_status(self,conv_id:str)->Dict[str,Any]:
+    """
+    Get conversion status
+    Args:
+    conv_id:str->which conversion you want to get status
+    
+    Returns a dictionary of get conversion status
+    
+    """
+    url:str=f"{self.baseurl}file/convertstatus?{self.login}&id={conv_id}"
+    return self._request("GET",url)
+  
+  def get_conversion_formats(self,conv_id:str)->Dict[str,Any]:
+    """
+    Get conversion formats
+    Args:
+    conv_id:str->which conversion you want to get formats
+    
+    Returns a dictionary of get conversion formats
+    
+    """
+    url:str=f"{self.baseurl}file/convertformats?{self.login}&id={conv_id}"
+    return self._request("GET",url)
+  
+  
+  def get_thumbnail(self,file_id:str)->Dict[str,Any]:
+    """
+    Get thumbnail
+    Args:
+    file_id:str->which file you want to get thumbnail
+    
+    Returns a dictionary of get thumbnail
+    
+    """
+    url:str=f"{self.baseurl}file/getsplash?{self.login}&file={file_id}"
     return self._request("GET",url)
   
   
