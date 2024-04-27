@@ -4,7 +4,7 @@ setup(
     name="Streamtape",
     version="1.0.0",
     description="Unofficial Streamtape API Wrapper for Python by Swadhin Biswas",
-    long_description=open("README.md", "r").read(),
+    long_description=open("/home/swadhin/GitHubproject/Streamtape/README.md", "r").read(),
     long_description_content_type="text/markdown,unlimited",
     keywords="api, streamtape, video, hosting",
     url="https://github.com/swadhinbiswas/Streamtape",
