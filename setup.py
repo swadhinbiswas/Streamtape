@@ -10,11 +10,10 @@ setup(
     url="https://github.com/swadhinbiswas/Streamtape",
     author="Swadhin Biswas",
     author_email="swadhinbiswas.cse@gmail.com",
-    packages=["streamtape"],
+    packages=["pystreamtape"],
     install_requires=[
         "requests",
     ],
-    requires_python=">=3.8",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
