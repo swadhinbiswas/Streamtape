@@ -1,0 +1,727 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pystreamtape.streamtape &#8212; Streamtape version 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=2764de69"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pystreamtape/streamtape';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Streamtape version 0.0.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pystreamtape.streamtape</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span><span class="n">Dict</span><span class="p">,</span><span class="n">List</span><span class="p">,</span><span class="n">Any</span>
+<span class="kn">import</span>  <span class="nn">requests</span>
+
+
+
+
+<div class="viewcode-block" id="Streamtape">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape">[docs]</a>
+<span class="k">class</span> <span class="nc">Streamtape</span><span class="p">:</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">api_key</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">api_secret</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span> <span class="o">=</span> <span class="s2">&quot;https://api.streamtape.com/&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="n">api_key</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">api_secret</span> <span class="o">=</span> <span class="n">api_secret</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;login=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">api_key</span><span class="si">}</span><span class="s2">&amp;key=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">api_secret</span><span class="si">}</span><span class="s2">&quot;</span>
+    
+  
+  <span class="k">def</span> <span class="nf">_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">method</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">endpoint</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">params</span><span class="p">:</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]</span><span class="o">=</span><span class="p">{})</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+    <span class="k">try</span><span class="p">:</span>
+      <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">endpoint</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+      <span class="k">return</span> <span class="n">e</span>
+    
+
+<div class="viewcode-block" id="Streamtape.account_info">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.account_info">[docs]</a>
+  <span class="k">def</span> <span class="nf">account_info</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get basic Accout info</span>
+<span class="sd">    Returns a dictionary of account info</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">account/info?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.download_ticket">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.download_ticket">[docs]</a>
+  <span class="k">def</span> <span class="nf">download_ticket</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">fileid</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get download ticket</span>
+<span class="sd">    Args:</span>
+<span class="sd">    fileid:str-&gt; file id of the file you want to download</span>
+
+<span class="sd">    Returns a dictionary of download ticket</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">dlticket?file=</span><span class="si">{</span><span class="n">fileid</span><span class="si">}</span><span class="s2">&amp;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.download_link">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.download_link">[docs]</a>
+  <span class="k">def</span> <span class="nf">download_link</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">fileid</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">ticketid</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get download link</span>
+<span class="sd">    Args:</span>
+<span class="sd">    fileid:str-&gt; file id of the file you want to download</span>
+<span class="sd">    ticketid:str-&gt; ticket id of the file you want to download</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of download link</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/dl?file=</span><span class="si">{</span><span class="n">fileid</span><span class="si">}</span><span class="s2">&amp;ticket=</span><span class="si">{</span><span class="n">ticketid</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.file_info">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.file_info">[docs]</a>
+  <span class="k">def</span> <span class="nf">file_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">file_id</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get file info</span>
+<span class="sd">    Args:</span>
+<span class="sd">    file_id:str=&gt;file if of the file you want to get info</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of file info</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/info?file=</span><span class="si">{</span><span class="n">file_id</span><span class="si">}</span><span class="s2">&amp;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.upload_file">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.upload_file">[docs]</a>
+  <span class="k">def</span> <span class="nf">upload_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                  <span class="n">file</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span>
+                  <span class="n">folder_id</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span>
+                  <span class="nb">hash</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                  <span class="n">httponly</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Upload file</span>
+<span class="sd">    Args:</span>
+<span class="sd">    file:str-&gt;file path</span>
+<span class="sd">    folder_id:Optional[str]-&gt;folder id</span>
+<span class="sd">    hash:Optional[str]-&gt;hash of file</span>
+<span class="sd">    httponly:Optional[bool]-&gt;http only</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of upload file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">/file/ul?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;folder=</span><span class="si">{</span><span class="n">folder_id</span><span class="si">}</span><span class="s2">&amp;sha256=</span><span class="si">{</span><span class="nb">hash</span><span class="si">}</span><span class="s2">&amp;httponly=</span><span class="si">{</span><span class="n">httponly</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">upload</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">uploadurl</span><span class="o">=</span><span class="n">upload</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+    <span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;file&#39;</span><span class="p">:</span><span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)}</span>
+    <span class="n">response</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">uploadurl</span><span class="p">,</span><span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.add_remote_upload">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.add_remote_upload">[docs]</a>
+  <span class="k">def</span> <span class="nf">add_remote_upload</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+    <span class="n">link</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span>
+    <span class="n">folder_id</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">header</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">name</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Add remote upload</span>
+<span class="sd">    Args:</span>
+<span class="sd">    link:str-&gt;link of file</span>
+<span class="sd">    folder_id:Optional[str]-&gt;folder id of file</span>
+<span class="sd">    header:Optional[str]-&gt;header of file</span>
+<span class="sd">    name:Optional[str]-&gt;name of file</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of add remote upload&quot;&quot;&quot;</span>
+    
+    <span class="n">url</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">remotedl/add?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;url=</span><span class="si">{</span><span class="n">link</span><span class="si">}</span><span class="s2">&amp;folder=</span><span class="si">{</span><span class="n">folder_id</span><span class="si">}</span><span class="s2">&amp;headers=</span><span class="si">{</span><span class="n">header</span><span class="si">}</span><span class="s2">amp;name=</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+    
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.remove_upload_upload">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.remove_upload_upload">[docs]</a>
+  <span class="k">def</span> <span class="nf">remove_upload_upload</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                           <span class="nb">id</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Remove upload upload</span>
+<span class="sd">    Args:</span>
+<span class="sd">    id:str-&gt;which file you want to remove</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of remove upload upload</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">remotedl/remove?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;id=</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">&quot;</span>
+    
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.cheak_upload_status">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.cheak_upload_status">[docs]</a>
+  <span class="k">def</span> <span class="nf">cheak_upload_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                          <span class="n">file_id</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">limit</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Cheak upload status</span>
+<span class="sd">    Args:</span>
+<span class="sd">    file_id:str-&gt;which file you want to cheak</span>
+<span class="sd">    limit:Optional[str]-&gt; limit of file</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of cheak upload status&quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">remotedl/status?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;limit=</span><span class="si">{</span><span class="n">file_id</span><span class="si">}</span><span class="s2">&amp;id=</span><span class="si">{</span><span class="n">limit</span><span class="si">}</span><span class="s2">&quot;</span>
+    
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.list_of_files">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.list_of_files">[docs]</a>
+  <span class="k">def</span> <span class="nf">list_of_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                    <span class="n">folder_id</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    List of files</span>
+<span class="sd">    Args:</span>
+<span class="sd">    folder:Optional[str]-&gt;folder id</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">folder_id</span><span class="o">==</span><span class="kc">None</span><span class="p">:</span>
+      <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/listfolder?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+     <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/listfolder?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;folder=</span><span class="si">{</span><span class="n">folder_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.create_folder">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.create_folder">[docs]</a>
+  <span class="k">def</span> <span class="nf">create_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">foldername</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">pid</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create folder</span>
+<span class="sd">    Args:</span>
+<span class="sd">    foldername:str-&gt;name of folder</span>
+<span class="sd">    pid:Optional[str]-&gt;parent folder id</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of create folder&quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/createfolder?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;name=</span><span class="si">{</span><span class="n">foldername</span><span class="si">}</span><span class="s2">&amp;parent=</span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2">&quot;</span>
+    
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.rename_folder">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.rename_folder">[docs]</a>
+  <span class="k">def</span> <span class="nf">rename_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">folder_id</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">new_name</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Rename folder</span>
+<span class="sd">    Args:</span>
+<span class="sd">    folder_id:str-&gt;which folder you want to rename</span>
+<span class="sd">    new_name:str-&gt;new name of folder</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of rename folder&quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/renamefolder?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;folder=</span><span class="si">{</span><span class="n">folder_id</span><span class="si">}</span><span class="s2">&amp;name=</span><span class="si">{</span><span class="n">new_name</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.delete_folder">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.delete_folder">[docs]</a>
+  <span class="k">def</span> <span class="nf">delete_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">folderid</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Delete folder</span>
+<span class="sd">    Args:</span>
+<span class="sd">    folderid:str-&gt;which folder you want to delete</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of delete folder&quot;&quot;&quot;</span>
+    
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/deletefolder?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;folder=</span><span class="si">{</span><span class="n">folderid</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.move_folder">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.move_folder">[docs]</a>
+  <span class="k">def</span> <span class="nf">move_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">file</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="n">mvfolder_id</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Move folder</span>
+<span class="sd">    Args:</span>
+<span class="sd">    file:str-&gt;which file you want to move</span>
+<span class="sd">    mvfolder_id:str-&gt;which folder you want to move</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of move folder&quot;&quot;&quot;</span>
+    
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/move?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;file=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&amp;folder=</span><span class="si">{</span><span class="n">mvfolder_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Streamtape.delete_file">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.delete_file">[docs]</a>
+  <span class="k">def</span> <span class="nf">delete_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">file_id</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Delete file</span>
+<span class="sd">    Args:</span>
+<span class="sd">    file_id:str </span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of delete file</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/delete?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;file=</span><span class="si">{</span><span class="n">file_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.list_running_conversions">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.list_running_conversions">[docs]</a>
+  <span class="k">def</span> <span class="nf">list_running_conversions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    List running conversions</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of list running conversions</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/runningconverts?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+  
+<div class="viewcode-block" id="Streamtape.list_of_confails">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.list_of_confails">[docs]</a>
+  <span class="k">def</span> <span class="nf">list_of_confails</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    List of confails</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of list of confails</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/failedconverts?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.list_of_finished_conversions">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.list_of_finished_conversions">[docs]</a>
+  <span class="k">def</span> <span class="nf">list_of_finished_conversions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    List of finished conversions</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of list of finished conversions</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/finishedconverts?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.list_of_conversion_formats">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.list_of_conversion_formats">[docs]</a>
+  <span class="k">def</span> <span class="nf">list_of_conversion_formats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    List of conversion formats</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of list of conversion formats</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/convertformats?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.convert_file">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.convert_file">[docs]</a>
+  <span class="k">def</span> <span class="nf">convert_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">file_id</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span><span class="nb">format</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert file</span>
+<span class="sd">    Args:</span>
+<span class="sd">    file_id:str-&gt;which file you want to convert</span>
+<span class="sd">    format:str-&gt;format of file</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of convert file</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/convert?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;file=</span><span class="si">{</span><span class="n">file_id</span><span class="si">}</span><span class="s2">&amp;format=</span><span class="si">{</span><span class="nb">format</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.cancel_conversion">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.cancel_conversion">[docs]</a>
+  <span class="k">def</span> <span class="nf">cancel_conversion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">conv_id</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Cancel conversion</span>
+<span class="sd">    Args:</span>
+<span class="sd">    conv_id:str-&gt;which conversion you want to cancel</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of cancel conversion</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/cancelconvert?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;id=</span><span class="si">{</span><span class="n">conv_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.get_conversion_status">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.get_conversion_status">[docs]</a>
+  <span class="k">def</span> <span class="nf">get_conversion_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">conv_id</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get conversion status</span>
+<span class="sd">    Args:</span>
+<span class="sd">    conv_id:str-&gt;which conversion you want to get status</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of get conversion status</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/convertstatus?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;id=</span><span class="si">{</span><span class="n">conv_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+<div class="viewcode-block" id="Streamtape.get_conversion_formats">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.get_conversion_formats">[docs]</a>
+  <span class="k">def</span> <span class="nf">get_conversion_formats</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">conv_id</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get conversion formats</span>
+<span class="sd">    Args:</span>
+<span class="sd">    conv_id:str-&gt;which conversion you want to get formats</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of get conversion formats</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/convertformats?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;id=</span><span class="si">{</span><span class="n">conv_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+  
+  
+<div class="viewcode-block" id="Streamtape.get_thumbnail">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.get_thumbnail">[docs]</a>
+  <span class="k">def</span> <span class="nf">get_thumbnail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">file_id</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get thumbnail</span>
+<span class="sd">    Args:</span>
+<span class="sd">    file_id:str-&gt;which file you want to get thumbnail</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of get thumbnail</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/getsplash?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;file=</span><span class="si">{</span><span class="n">file_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Streamtape.get_splash">
+<a class="viewcode-back" href="../../pystreamtape.html#pystreamtape.streamtape.Streamtape.get_splash">[docs]</a>
+  <span class="k">def</span> <span class="nf">get_splash</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">file_id</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get splash</span>
+<span class="sd">    Args:</span>
+<span class="sd">    file_id:str-&gt;which file you want to get splash</span>
+<span class="sd">    </span>
+<span class="sd">    Returns a dictionary of get splash</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">baseurl</span><span class="si">}</span><span class="s2">file/getsplash?</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="si">}</span><span class="s2">&amp;file=</span><span class="si">{</span><span class="n">file_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span><span class="n">url</span><span class="p">)</span></div>
+</div>
+
+  
+  
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Swadhin Biswas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Swadhin Biswas.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

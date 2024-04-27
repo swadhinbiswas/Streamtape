@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>pystreamtape package &#8212; Streamtape version 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=2764de69"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pystreamtape';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Streamtape version 0.0.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/pystreamtape.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>pystreamtape package</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pystreamtape.streamtape">pystreamtape.streamtape module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape"><code class="docutils literal notranslate"><span class="pre">Streamtape</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.account_info"><code class="docutils literal notranslate"><span class="pre">Streamtape.account_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.add_remote_upload"><code class="docutils literal notranslate"><span class="pre">Streamtape.add_remote_upload()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.cancel_conversion"><code class="docutils literal notranslate"><span class="pre">Streamtape.cancel_conversion()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.cheak_upload_status"><code class="docutils literal notranslate"><span class="pre">Streamtape.cheak_upload_status()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.convert_file"><code class="docutils literal notranslate"><span class="pre">Streamtape.convert_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.create_folder"><code class="docutils literal notranslate"><span class="pre">Streamtape.create_folder()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.delete_file"><code class="docutils literal notranslate"><span class="pre">Streamtape.delete_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.delete_folder"><code class="docutils literal notranslate"><span class="pre">Streamtape.delete_folder()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.download_link"><code class="docutils literal notranslate"><span class="pre">Streamtape.download_link()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.download_ticket"><code class="docutils literal notranslate"><span class="pre">Streamtape.download_ticket()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.file_info"><code class="docutils literal notranslate"><span class="pre">Streamtape.file_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.get_conversion_formats"><code class="docutils literal notranslate"><span class="pre">Streamtape.get_conversion_formats()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.get_conversion_status"><code class="docutils literal notranslate"><span class="pre">Streamtape.get_conversion_status()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.get_splash"><code class="docutils literal notranslate"><span class="pre">Streamtape.get_splash()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.get_thumbnail"><code class="docutils literal notranslate"><span class="pre">Streamtape.get_thumbnail()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.list_of_confails"><code class="docutils literal notranslate"><span class="pre">Streamtape.list_of_confails()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.list_of_conversion_formats"><code class="docutils literal notranslate"><span class="pre">Streamtape.list_of_conversion_formats()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.list_of_files"><code class="docutils literal notranslate"><span class="pre">Streamtape.list_of_files()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.list_of_finished_conversions"><code class="docutils literal notranslate"><span class="pre">Streamtape.list_of_finished_conversions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.list_running_conversions"><code class="docutils literal notranslate"><span class="pre">Streamtape.list_running_conversions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.move_folder"><code class="docutils literal notranslate"><span class="pre">Streamtape.move_folder()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.remove_upload_upload"><code class="docutils literal notranslate"><span class="pre">Streamtape.remove_upload_upload()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.rename_folder"><code class="docutils literal notranslate"><span class="pre">Streamtape.rename_folder()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.upload_file"><code class="docutils literal notranslate"><span class="pre">Streamtape.upload_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pystreamtape">Module contents</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="pystreamtape-package">
+<h1>pystreamtape package<a class="headerlink" href="#pystreamtape-package" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-pystreamtape.streamtape">
+<span id="pystreamtape-streamtape-module"></span><h2>pystreamtape.streamtape module<a class="headerlink" href="#module-pystreamtape.streamtape" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pystreamtape.streamtape.</span></span><span class="sig-name descname"><span class="pre">Streamtape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_secret</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.account_info">
+<span class="sig-name descname"><span class="pre">account_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.account_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.account_info" title="Link to this definition">#</a></dt>
+<dd><p>Get basic Accout info
+Returns a dictionary of account info</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.add_remote_upload">
+<span class="sig-name descname"><span class="pre">add_remote_upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.add_remote_upload"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.add_remote_upload" title="Link to this definition">#</a></dt>
+<dd><p>Add remote upload
+Args:
+link:str-&gt;link of file
+folder_id:Optional[str]-&gt;folder id of file
+header:Optional[str]-&gt;header of file
+name:Optional[str]-&gt;name of file</p>
+<p>Returns a dictionary of add remote upload</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.cancel_conversion">
+<span class="sig-name descname"><span class="pre">cancel_conversion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conv_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.cancel_conversion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.cancel_conversion" title="Link to this definition">#</a></dt>
+<dd><p>Cancel conversion
+Args:
+conv_id:str-&gt;which conversion you want to cancel</p>
+<p>Returns a dictionary of cancel conversion</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.cheak_upload_status">
+<span class="sig-name descname"><span class="pre">cheak_upload_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.cheak_upload_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.cheak_upload_status" title="Link to this definition">#</a></dt>
+<dd><p>Cheak upload status
+Args:
+file_id:str-&gt;which file you want to cheak
+limit:Optional[str]-&gt; limit of file</p>
+<p>Returns a dictionary of cheak upload status</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.convert_file">
+<span class="sig-name descname"><span class="pre">convert_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.convert_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.convert_file" title="Link to this definition">#</a></dt>
+<dd><p>Convert file
+Args:
+file_id:str-&gt;which file you want to convert
+format:str-&gt;format of file</p>
+<p>Returns a dictionary of convert file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.create_folder">
+<span class="sig-name descname"><span class="pre">create_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">foldername</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.create_folder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.create_folder" title="Link to this definition">#</a></dt>
+<dd><p>Create folder
+Args:
+foldername:str-&gt;name of folder
+pid:Optional[str]-&gt;parent folder id</p>
+<p>Returns a dictionary of create folder</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.delete_file">
+<span class="sig-name descname"><span class="pre">delete_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.delete_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.delete_file" title="Link to this definition">#</a></dt>
+<dd><p>Delete file
+Args:
+file_id:str</p>
+<p>Returns a dictionary of delete file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.delete_folder">
+<span class="sig-name descname"><span class="pre">delete_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folderid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.delete_folder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.delete_folder" title="Link to this definition">#</a></dt>
+<dd><p>Delete folder
+Args:
+folderid:str-&gt;which folder you want to delete</p>
+<p>Returns a dictionary of delete folder</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.download_link">
+<span class="sig-name descname"><span class="pre">download_link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticketid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.download_link"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.download_link" title="Link to this definition">#</a></dt>
+<dd><p>Get download link
+Args:
+fileid:str-&gt; file id of the file you want to download
+ticketid:str-&gt; ticket id of the file you want to download</p>
+<p>Returns a dictionary of download link</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.download_ticket">
+<span class="sig-name descname"><span class="pre">download_ticket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.download_ticket"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.download_ticket" title="Link to this definition">#</a></dt>
+<dd><p>Get download ticket
+Args:
+fileid:str-&gt; file id of the file you want to download</p>
+<p>Returns a dictionary of download ticket</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.file_info">
+<span class="sig-name descname"><span class="pre">file_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.file_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.file_info" title="Link to this definition">#</a></dt>
+<dd><p>Get file info
+Args:
+file_id:str=&gt;file if of the file you want to get info</p>
+<p>Returns a dictionary of file info</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.get_conversion_formats">
+<span class="sig-name descname"><span class="pre">get_conversion_formats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conv_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.get_conversion_formats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.get_conversion_formats" title="Link to this definition">#</a></dt>
+<dd><p>Get conversion formats
+Args:
+conv_id:str-&gt;which conversion you want to get formats</p>
+<p>Returns a dictionary of get conversion formats</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.get_conversion_status">
+<span class="sig-name descname"><span class="pre">get_conversion_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conv_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.get_conversion_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.get_conversion_status" title="Link to this definition">#</a></dt>
+<dd><p>Get conversion status
+Args:
+conv_id:str-&gt;which conversion you want to get status</p>
+<p>Returns a dictionary of get conversion status</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.get_splash">
+<span class="sig-name descname"><span class="pre">get_splash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.get_splash"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.get_splash" title="Link to this definition">#</a></dt>
+<dd><p>Get splash
+Args:
+file_id:str-&gt;which file you want to get splash</p>
+<p>Returns a dictionary of get splash</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.get_thumbnail">
+<span class="sig-name descname"><span class="pre">get_thumbnail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.get_thumbnail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.get_thumbnail" title="Link to this definition">#</a></dt>
+<dd><p>Get thumbnail
+Args:
+file_id:str-&gt;which file you want to get thumbnail</p>
+<p>Returns a dictionary of get thumbnail</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.list_of_confails">
+<span class="sig-name descname"><span class="pre">list_of_confails</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.list_of_confails"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.list_of_confails" title="Link to this definition">#</a></dt>
+<dd><p>List of confails</p>
+<p>Returns a dictionary of list of confails</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.list_of_conversion_formats">
+<span class="sig-name descname"><span class="pre">list_of_conversion_formats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.list_of_conversion_formats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.list_of_conversion_formats" title="Link to this definition">#</a></dt>
+<dd><p>List of conversion formats</p>
+<p>Returns a dictionary of list of conversion formats</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.list_of_files">
+<span class="sig-name descname"><span class="pre">list_of_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.list_of_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.list_of_files" title="Link to this definition">#</a></dt>
+<dd><p>List of files
+Args:
+folder:Optional[str]-&gt;folder id</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.list_of_finished_conversions">
+<span class="sig-name descname"><span class="pre">list_of_finished_conversions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.list_of_finished_conversions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.list_of_finished_conversions" title="Link to this definition">#</a></dt>
+<dd><p>List of finished conversions</p>
+<p>Returns a dictionary of list of finished conversions</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.list_running_conversions">
+<span class="sig-name descname"><span class="pre">list_running_conversions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.list_running_conversions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.list_running_conversions" title="Link to this definition">#</a></dt>
+<dd><p>List running conversions</p>
+<p>Returns a dictionary of list running conversions</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.move_folder">
+<span class="sig-name descname"><span class="pre">move_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mvfolder_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.move_folder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.move_folder" title="Link to this definition">#</a></dt>
+<dd><p>Move folder
+Args:
+<a class="reference external" href="file:str-">file:str-</a>&gt;which file you want to move
+mvfolder_id:str-&gt;which folder you want to move</p>
+<p>Returns a dictionary of move folder</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.remove_upload_upload">
+<span class="sig-name descname"><span class="pre">remove_upload_upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.remove_upload_upload"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.remove_upload_upload" title="Link to this definition">#</a></dt>
+<dd><p>Remove upload upload
+Args:
+id:str-&gt;which file you want to remove</p>
+<p>Returns a dictionary of remove upload upload</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.rename_folder">
+<span class="sig-name descname"><span class="pre">rename_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.rename_folder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.rename_folder" title="Link to this definition">#</a></dt>
+<dd><p>Rename folder
+Args:
+folder_id:str-&gt;which folder you want to rename
+new_name:str-&gt;new name of folder</p>
+<p>Returns a dictionary of rename folder</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pystreamtape.streamtape.Streamtape.upload_file">
+<span class="sig-name descname"><span class="pre">upload_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">httponly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pystreamtape/streamtape.html#Streamtape.upload_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pystreamtape.streamtape.Streamtape.upload_file" title="Link to this definition">#</a></dt>
+<dd><p>Upload file
+Args:
+<a class="reference external" href="file:str-">file:str-</a>&gt;file path
+folder_id:Optional[str]-&gt;folder id
+hash:Optional[str]-&gt;hash of file
+httponly:Optional[bool]-&gt;http only</p>
+<p>Returns a dictionary of upload file</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pystreamtape">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pystreamtape" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pystreamtape.streamtape">pystreamtape.streamtape module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape"><code class="docutils literal notranslate"><span class="pre">Streamtape</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.account_info"><code class="docutils literal notranslate"><span class="pre">Streamtape.account_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.add_remote_upload"><code class="docutils literal notranslate"><span class="pre">Streamtape.add_remote_upload()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.cancel_conversion"><code class="docutils literal notranslate"><span class="pre">Streamtape.cancel_conversion()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.cheak_upload_status"><code class="docutils literal notranslate"><span class="pre">Streamtape.cheak_upload_status()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.convert_file"><code class="docutils literal notranslate"><span class="pre">Streamtape.convert_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.create_folder"><code class="docutils literal notranslate"><span class="pre">Streamtape.create_folder()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.delete_file"><code class="docutils literal notranslate"><span class="pre">Streamtape.delete_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.delete_folder"><code class="docutils literal notranslate"><span class="pre">Streamtape.delete_folder()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.download_link"><code class="docutils literal notranslate"><span class="pre">Streamtape.download_link()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.download_ticket"><code class="docutils literal notranslate"><span class="pre">Streamtape.download_ticket()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.file_info"><code class="docutils literal notranslate"><span class="pre">Streamtape.file_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.get_conversion_formats"><code class="docutils literal notranslate"><span class="pre">Streamtape.get_conversion_formats()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.get_conversion_status"><code class="docutils literal notranslate"><span class="pre">Streamtape.get_conversion_status()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.get_splash"><code class="docutils literal notranslate"><span class="pre">Streamtape.get_splash()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.get_thumbnail"><code class="docutils literal notranslate"><span class="pre">Streamtape.get_thumbnail()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.list_of_confails"><code class="docutils literal notranslate"><span class="pre">Streamtape.list_of_confails()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.list_of_conversion_formats"><code class="docutils literal notranslate"><span class="pre">Streamtape.list_of_conversion_formats()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.list_of_files"><code class="docutils literal notranslate"><span class="pre">Streamtape.list_of_files()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.list_of_finished_conversions"><code class="docutils literal notranslate"><span class="pre">Streamtape.list_of_finished_conversions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.list_running_conversions"><code class="docutils literal notranslate"><span class="pre">Streamtape.list_running_conversions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.move_folder"><code class="docutils literal notranslate"><span class="pre">Streamtape.move_folder()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.remove_upload_upload"><code class="docutils literal notranslate"><span class="pre">Streamtape.remove_upload_upload()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.rename_folder"><code class="docutils literal notranslate"><span class="pre">Streamtape.rename_folder()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pystreamtape.streamtape.Streamtape.upload_file"><code class="docutils literal notranslate"><span class="pre">Streamtape.upload_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pystreamtape">Module contents</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Swadhin Biswas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Swadhin Biswas.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
