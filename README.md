@@ -23,7 +23,7 @@ pip3 install pystreamtape
 **General usage**
 *Class start with follwing initialization :*
 
-```python3
+```python
 
 var=Streamtape('api_key','api_secret')
 ```
@@ -32,7 +32,7 @@ var=Streamtape('api_key','api_secret')
 
 ### For the general purpose of any response, the ApiResponse class has been created to return a dict with this structure
 
-```
+```python
 from streamtape import Streamtape
 var=Streamtape('api_key','api_secret')
 
