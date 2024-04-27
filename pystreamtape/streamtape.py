@@ -317,3 +317,17 @@ class Streamtape:
     """
     url:str=f"{self.baseurl}file/getsplash?{self.login}&file={file_id}"
     return self._request("GET",url)
+
+  def get_splash(self,file_id:str)->Dict[str,Any]:
+    """
+    Get splash
+    Args:
+    file_id:str->which file you want to get splash
+    
+    Returns a dictionary of get splash
+    
+    """
+    url:str=f"{self.baseurl}file/getsplash?{self.login}&file={file_id}"
+    return self._request("GET",url)
+  
+  
