@@ -42,7 +42,7 @@ var=Streamtape('api_key','api_secret')
 ### For the general purpose of any response, the ApiResponse class has been created to return a dict with this structure
 
 ```python
-from streamtape import Streamtape
+from pystreamtape.streamtape import Streamtape
 var=Streamtape('api_key','api_secret')
 
 var.account_info()
