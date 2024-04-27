@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
    
-    name="Streamtape",
+    name="PyStreamtape",
     version="1.0.0",
     description="Unofficial Streamtape API Wrapper for Python by Swadhin Biswas",
     long_description=open("/home/swadhin/GitHubproject/Streamtape/READMEx.md", "r").read(),
