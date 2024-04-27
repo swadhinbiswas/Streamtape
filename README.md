@@ -23,7 +23,8 @@ pip3 install pystreamtape
 **General usage**
 *Class start with follwing initialization :*
 
-```python2
+```python3
+
 var=Streamtape('api_key','api_secret')
 ```
 
