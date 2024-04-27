@@ -21,8 +21,14 @@
 Install With
 
 ```pyhton3
-pip3 install streamtapex
+pip3 install pystreamtape
 ```
 ## Usage
 
 ### General usage
+<b>Class start with follwing initialization :</b>
+
+```python3
+   var=Streamtape('api_key','api_secret')
+
+```
