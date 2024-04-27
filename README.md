@@ -21,6 +21,15 @@ pip3 install pystreamtape
 ## Usage
 
 **General usage**
+
+```json
+{
+    "status": <status-code>,
+    "msg": "<informational message. might vary, use the status code in your code!>",
+    "result": <result of the request. varies depending on the request>
+}
+```
+
 *Class start with follwing initialization :*
 
 ```python
