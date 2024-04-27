@@ -8,7 +8,7 @@
 
 ## Video sharing has never been easier
 
-*It is a simple API wrapper for the streaming service streamtape.com. The API documentation can be found on the [docs page](link:). The whole structure of the API has been split into different classes for easy overview and usage.*
+*It is a simple API wrapper for the streaming service streamtape.com. The API documentation can be found on the [docs page](link). The whole structure of the API has been split into different classes for easy overview and usage.*
 
 ## Installation
 
