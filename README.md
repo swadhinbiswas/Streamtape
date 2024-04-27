@@ -20,7 +20,7 @@
 
 Install With
 
-```pyhton3
+```python3
 pip3 install pystreamtape
 ```
 ## Usage
@@ -30,5 +30,77 @@ pip3 install pystreamtape
 
 ```python3
    var=Streamtape('api_key','api_secret')
+
+```
+
+##  General response
+
+<h4>For the general purpose of any response, the ApiResponse class has been created to return a dict with this structure:</h6>
+
+```json
+{
+    "status": <status-code>,
+    "msg": "<informational message. might vary, use the status code in your code!>",
+    "result": <result of the request. varies depending on the request>
+}
+```
+
+```python3
+from streamtape import Streamtape
+var=Streamtape('api_key','api_secret')
+
+var.account_info()
+
+var.download_ticket()
+
+var.download_link()
+
+var.file_info()
+
+var.upload_file()
+
+var.add_remote_upload()
+
+var.remove_upload_upload()
+
+var.cheak_upload_status()
+
+var.list_of_files()
+
+var.create_folder()
+
+var.rename_folder()
+
+var.delete_folder()
+
+var.move_folder()
+
+var.delete_file()
+
+var.list_running_conversions()
+
+var.list_of_confails()
+
+var.list_of_finished_conversions()
+
+var.list_of_conversion_formats()
+
+var.convert_file()
+
+var.cancel_conversion()
+
+var.get_conversion_status()
+
+var.get_conversion_formats()
+
+var. get_thumbnail()
+
+var.get_splash()
+
+
+
+
+
+
 
 ```
