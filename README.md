@@ -23,24 +23,19 @@ pip3 install pystreamtape
 **General usage**
 *Class start with follwing initialization :*
 
-```python3
-   var=Streamtape('api_key','api_secret')
-
-```
+var=Streamtape('api_key','api_secret')
 
 ## General response
 
 ### For the general purpose of any response, the ApiResponse class has been created to return a dict with this structure
 
-```json
-{
+`{
     "status": <status-code>,
     "msg": "<informational message. might vary, use the status code in your code!>",
     "result": <result of the request. varies depending on the request>
-}
-```
+}`
 
-```python3
+`
 from streamtape import Streamtape
 var=Streamtape('api_key','api_secret')
 
@@ -91,5 +86,4 @@ var.get_conversion_formats()
 var. get_thumbnail()
 
 var.get_splash()
-
-```
+`
