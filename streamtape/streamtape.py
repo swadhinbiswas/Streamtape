@@ -7,7 +7,6 @@ import  requests
 class Streamtape:
   def __init__(self,api_key:str,api_secret:str):
     self.baseurl = "https://api.streamtape.com/"
-
     self.api_key = api_key
     self.api_secret = api_secret
     self.login=f"login={self.api_key}&key={self.api_secret}"
@@ -27,7 +26,7 @@ class Streamtape:
     Returns a dictionary of account info
     
     """
-    url=f"{self.baseurl}account/info?{self.login}"
+    url:str=f"{self.baseurl}account/info?{self.login}"
     return self._request("GET",url)
   
   def download_ticket(self,fileid:str)->Dict[str,Any]:
@@ -39,7 +38,7 @@ class Streamtape:
 
     Returns a dictionary of download ticket
     """
-    url=f"{self.baseurl}dlticket?file={fileid}&{self.login}"
+    url:str=f"{self.baseurl}dlticket?file={fileid}&{self.login}"
     return self._request("GET",url)
   
   def download_link(self,fileid:str,ticketid:str)->Dict[str,Any]:
@@ -53,7 +52,7 @@ class Streamtape:
     Returns a dictionary of download link
     
     """
-    url=f"{self.baseurl}file/dl?file={fileid}&ticket={ticketid}"
+    url:str=f"{self.baseurl}file/dl?file={fileid}&ticket={ticketid}"
     return self._request("GET",url)
   
   def file_info(self,file_id:str)->Dict[str,Any]:
@@ -65,7 +64,7 @@ class Streamtape:
     
     Returns a dictionary of file info
     """
-    url=f"{self.baseurl}file/info?file={file_id}&{self.login}"
+    url:str=f"{self.baseurl}file/info?file={file_id}&{self.login}"
     return self._request("GET",url)
   
   def upload_file(self,
@@ -84,7 +83,7 @@ class Streamtape:
     
     Returns a dictionary of upload file
     """
-    url=f"{self.baseurl}/file/ul?{self.login}&folder={folder_id}&sha256={hash}&httponly={httponly}"
+    url:str=f"{self.baseurl}/file/ul?{self.login}&folder={folder_id}&sha256={hash}&httponly={httponly}"
     upload=self._request("GET",url)
     uploadurl=upload['result']['url']
     files={'file':open(file,'rb')}
@@ -121,7 +120,7 @@ class Streamtape:
     
     Returns a dictionary of remove upload upload
     """
-    url=f"{self.baseurl}remotedl/remove?{self.login}&id={id}"
+    url:str=f"{self.baseurl}remotedl/remove?{self.login}&id={id}"
     
     return self._request("GET",url)
   
@@ -136,7 +135,7 @@ class Streamtape:
     limit:Optional[str]-> limit of file
     
     Returns a dictionary of cheak upload status"""
-    url=f"{self.baseurl}remotedl/status?{self.login}&limit={file_id}&id={limit}"
+    url:str=f"{self.baseurl}remotedl/status?{self.login}&limit={file_id}&id={limit}"
     
     return self._request("GET",url)
   
@@ -149,9 +148,9 @@ class Streamtape:
     
     """
     if folder_id==None:
-      url=url=f"{self.baseurl}file/listfolder?{self.login}"
+      url:str=f"{self.baseurl}file/listfolder?{self.login}"
     else:
-     url=f"{self.baseurl}file/listfolder?{self.login}&folder={folder_id}"
+     url:str=f"{self.baseurl}file/listfolder?{self.login}&folder={folder_id}"
     return self._request("GET",url)
   
   def create_folder(self,foldername:str,pid:Optional[str]=None)->Dict[str,Any]:
