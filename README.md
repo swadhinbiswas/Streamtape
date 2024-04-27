@@ -2,40 +2,35 @@
 
 ![Screenshot from 2024-04-27 03-24-10](https://github.com/swadhinbiswas/Streamtape/assets/107450069/a0b2566a-45d8-47d8-bb77-9f5d0bcbba76)
 
-
-## Streamtape tries to give the user the best experience you can get on a video-sharing website. 
+## Streamtape tries to give the user the best experience you can get on a video-sharing website
 
 ![Screenshot from 2024-04-27 03-24-24](https://github.com/swadhinbiswas/Streamtape/assets/107450069/f186fb0f-3f95-437e-a165-bd5e826d6f7b)
-</br>
 
+## Video sharing has never been easier
 
-# Video sharing has never been easier
+*It is a simple API wrapper for the streaming service streamtape.com. The API documentation can be found on the [docs page](link:). The whole structure of the API has been split into different classes for easy overview and usage.*
 
-<h3> It is a simple API wrapper for the streaming service streamtape.com. The API documentation can be found on the [docs page](link:). The whole structure of the API has been split into different classes for easy overview and usage.</p>
-
-</br>
-
-
-# Installation
+## Installation
 
 Install With
 
 ```python3
 pip3 install pystreamtape
 ```
+
 ## Usage
 
-### General usage
-<b>Class start with follwing initialization :</b>
+**General usage**
+*Class start with follwing initialization :*
 
 ```python3
    var=Streamtape('api_key','api_secret')
 
 ```
 
-##  General response
+## General response
 
-<h4>For the general purpose of any response, the ApiResponse class has been created to return a dict with this structure:</h6>
+### For the general purpose of any response, the ApiResponse class has been created to return a dict with this structure:
 
 ```json
 {
@@ -96,11 +91,5 @@ var.get_conversion_formats()
 var. get_thumbnail()
 
 var.get_splash()
-
-
-
-
-
-
 
 ```
